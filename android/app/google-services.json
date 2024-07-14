@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "795468580595",
+    "project_id": "the-sprinklr-bakery",
+    "storage_bucket": "the-sprinklr-bakery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795468580595:android:4b620268f9ad863a8c5986",
+        "android_client_info": {
+          "package_name": "com.example.the_sprinklr_bakery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDWmgwSl5IslC0ipH4CIsz3A4_YrDxFDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
