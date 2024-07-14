@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:the_sprinklr_bakery/screen/Student.dart';
 import 'package:the_sprinklr_bakery/screen/Teacher.dart';
+import 'package:the_sprinklr_bakery/screen/admin/admin_home.dart';
+import 'package:the_sprinklr_bakery/screen/home.dart';
+import 'package:the_sprinklr_bakery/service/route_service.dart';
 
 import 'register.dart';
 
@@ -270,14 +273,14 @@ class _LoginPageState extends State<LoginPage> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => Teacher(),
+              builder: (context) => AdminHomePage(),
             ),
           );
         } else {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => Student(),
+              builder: (context) => HomePage(),
             ),
           );
         }
@@ -295,7 +298,7 @@ class _LoginPageState extends State<LoginPage> {
           email: email,
           password: password,
         );
-        route();
+        CloudStoreService().route();
       } on FirebaseAuthException catch (e) {
         if (e.code == 'user-not-found') {
           print('No user found for that email.');
