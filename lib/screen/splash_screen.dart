@@ -24,6 +24,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double unitHeightValue = MediaQuery.of(context).size.height * 0.001;
+    double multiplier1 = 42;
+    double multiplier2 = 15;
     return Scaffold(
         backgroundColor: Colors.white,
         body: Column(
@@ -38,12 +41,12 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
+            Text(
               "Where Every Bite",
               style: TextStyle(
                 fontFamily: 'Poppins',
                 color: Colors.black,
-                fontSize: 40,
+                fontSize: multiplier1 * unitHeightValue,
                 fontWeight: FontWeight.w600,
                 shadows: <Shadow>[
                   Shadow(
@@ -55,7 +58,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
               textAlign: TextAlign.left,
             ),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -64,7 +67,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   style: TextStyle(
                     fontFamily: 'Poppins',
                     color: Colors.black,
-                    fontSize: 40,
+                    fontSize: multiplier1 * unitHeightValue,
                     fontWeight: FontWeight.w600,
                     shadows: <Shadow>[
                       Shadow(
@@ -81,7 +84,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   style: TextStyle(
                     fontFamily: 'Poppins',
                     color: primaryColors,
-                    fontSize: 40,
+                    fontSize: multiplier1 * unitHeightValue,
                     fontWeight: FontWeight.w700,
                     shadows: <Shadow>[
                       Shadow(
@@ -96,7 +99,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ],
             ),
             const SizedBox(height: 1),
-            const Padding(
+            Padding(
               padding:
                   EdgeInsets.only(left: 20.0, right: 20, bottom: 20, top: 7),
               child: Center(
@@ -105,7 +108,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Color.fromARGB(255, 71, 70, 70),
-                      fontSize: 13,
+                      fontSize: multiplier2 * unitHeightValue,
                       fontWeight: FontWeight.w400,
                       shadows: [
                         Shadow(

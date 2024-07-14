@@ -19,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
   bool visible = false;
   final _formkey = GlobalKey<FormState>();
   final TextEditingController emailController =
-      new TextEditingController(text: 'admin@gmail.com');
+      new TextEditingController(text: 'admin@gmail.com'); //admin
   final TextEditingController passwordController =
       new TextEditingController(text: 'admin@123');
 
