@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_sprinklr_bakery/colors.dart';
 
 class LoadingPage extends StatefulWidget {
   const LoadingPage({super.key});
@@ -10,9 +11,24 @@ class LoadingPage extends StatefulWidget {
 class _LoadingPageState extends State<LoadingPage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
         child: Scaffold(
-      body: Center(child: const Text("Loading Page")),
+      backgroundColor: Colors.white,
+      body: Center(
+          child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          CircularProgressIndicator(
+            color: primaryColors,
+            strokeWidth: 2,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Text("Loading.."),
+        ],
+      )),
     ));
   }
 }
