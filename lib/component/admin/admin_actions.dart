@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:the_sprinklr_bakery/component/actionComponent.dart';
 import 'package:the_sprinklr_bakery/component/title.dart';
+import 'package:the_sprinklr_bakery/screen/admin/categoryPage.dart';
+import 'package:the_sprinklr_bakery/screen/admin/cupcakePage.dart';
 import 'package:the_sprinklr_bakery/screen/home.dart'; // Example page
 
 class AdminActions extends StatefulWidget {
@@ -19,6 +21,7 @@ class _AdminActionsState extends State<AdminActions> {
         children: [
           const TitleComponent(
             title: "Actions",
+            subTitle: '',
           ),
           Padding(
             padding: const EdgeInsets.only(left: 16.0, right: 16),
@@ -37,7 +40,8 @@ class _AdminActionsState extends State<AdminActions> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomePage()),
+                          MaterialPageRoute(
+                              builder: (context) => CupcakeCategoryList()),
                         );
                       },
                     ),
@@ -50,7 +54,8 @@ class _AdminActionsState extends State<AdminActions> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomePage()),
+                          MaterialPageRoute(
+                              builder: (context) => CupCakeManagePage()),
                         );
                       },
                     ),
