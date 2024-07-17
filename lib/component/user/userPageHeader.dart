@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:the_sprinklr_bakery/colors.dart';
+import 'package:the_sprinklr_bakery/screen/OrderActivity.dart';
 import 'package:the_sprinklr_bakery/screen/home.dart';
 import 'package:the_sprinklr_bakery/screen/shoppingCart.dart';
 
@@ -84,7 +85,7 @@ class UserPageHeader extends StatelessWidget {
                       child: const Icon(
                         Icons.account_circle,
                         color: Color.fromARGB(255, 254, 252, 252),
-                        size: 28.0,
+                        size: 22.0,
                         semanticLabel:
                             'Text to announce in accessibility modes',
                       ),
@@ -105,25 +106,53 @@ class UserPageHeader extends StatelessWidget {
                     ),
                     if (!back_visible)
                       Container(
-                          padding: const EdgeInsets.all(.05),
-                          margin: const EdgeInsets.only(
-                              left: 20, top: 10, bottom: 10, right: 20),
-                          child: IconButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => UserShoppingCart()),
-                              );
-                            },
-                            icon: const Icon(
-                              Icons.shopping_cart_checkout_outlined,
-                              color: Color.fromARGB(255, 115, 115, 115),
-                              size: 24.0,
-                              semanticLabel:
-                                  'Text to announce in accessibility modes',
-                            ),
-                          )),
+                        margin: const EdgeInsets.only(
+                            left: 20, top: 10, bottom: 10, right: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Container(
+                                padding: const EdgeInsets.all(.05),
+                                child: IconButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              UserOrderActivity()),
+                                    );
+                                  },
+                                  icon: const Icon(
+                                    Icons.notifications_none,
+                                    color: Color.fromARGB(255, 115, 115, 115),
+                                    size: 22.0,
+                                    semanticLabel:
+                                        'Text to announce in accessibility modes',
+                                  ),
+                                )),
+                            Container(
+                                padding: const EdgeInsets.all(.05),
+                                child: IconButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              UserShoppingCart()),
+                                    );
+                                  },
+                                  icon: const Icon(
+                                    Icons.shopping_cart_checkout_outlined,
+                                    color: Color.fromARGB(255, 115, 115, 115),
+                                    size: 22.0,
+                                    semanticLabel:
+                                        'Text to announce in accessibility modes',
+                                  ),
+                                )),
+                          ],
+                        ),
+                      )
                   ],
                 ),
               ],
